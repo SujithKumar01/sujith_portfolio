@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import AnimateSection from "./AnimateSection";
+import type { Variants } from "framer-motion";
 
-/* Container animation for staggered cards */
-const containerVariant = {
+const containerVariant: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -13,15 +13,21 @@ const containerVariant = {
   },
 };
 
-/* Individual card animation */
-const cardVariant = {
-  hidden: { opacity: 0, y: 30 },
+const cardVariant: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
   },
 };
+
 
 export default function About() {
   return (
