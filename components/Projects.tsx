@@ -2,6 +2,7 @@
 
 import AnimateSection from "./AnimateSection";
 import { projects } from "@/data/projects";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
@@ -13,9 +14,18 @@ export default function Projects() {
 
         <div className="space-y-16">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="border border-white/10 rounded-2xl p-8 hover:border-blue-500/40 transition"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              whileHover={{ scale: 1.02 }}
+              className="border border-white/10 rounded-2xl p-8 bg-black/40 hover:border-blue-500/40 transition"
             >
               <h3 className="text-2xl font-semibold mb-3 text-white">
                 {project.title}
@@ -42,7 +52,7 @@ export default function Projects() {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

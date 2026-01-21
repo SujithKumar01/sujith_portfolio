@@ -27,7 +27,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/"
+            href="https://www.linkedin.com/in/thangella-sujith-kumar/"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white/30 px-8 py-3 rounded-md hover:border-white transition"
@@ -36,7 +36,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://github.com/"
+            href="https://github.com/SujithKumar01"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white/30 px-8 py-3 rounded-md hover:border-white transition"
